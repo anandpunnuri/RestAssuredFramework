@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+<site-name>day103-20200-sql-95h</site-name>
+<site_name>day103_20200_sql_95h</site_name>
+<baseURI>https://day103-20200-sql-95h-irs.dq.lan</baseURI>
+<basePath>/km/api/latest</basePath>
+<accountusername>enuser1</accountusername>
+<accountuserpwd>Account1234</accountuserpwd>
+<apiusername>iu_migrator</apiusername>
+<apiuserpwd>okcs1234</apiuserpwd>
+<locale>en_US</locale>
+<interfaceID>1</interfaceID>
+<lan>dq</lan>
+<Accept>application/xml</Accept>
+<ContentType>application/xml</ContentType>
+<integrationToken>ZGF5MTAzXzIwMjAwX3NxbF85NWg6czZzQ2ZsYnpBWVRuQ1RzdjFXb2VIWHNCTm1oc3g4UUJuZWloNTdYUFhNS0JLbURVL3ZCQkh0OUhuUkp2Z2dHYXQ1eEpDM0RCMHJkSnltN21GN0d2cHpwNE5TaGtTeVBxQ1dhSWVOZ3AzMmNGWmJQRU11RFhLU3BPNlBXUGtIKzZ5Q0MwdERQOWVCM1JmVHRjdFR6Q3FIRU1ZTVEzTjFWQWp5MjhtVFhBWFNvPQ==</integrationToken>
+<userauthtoken>{"localeId":"en_US","knowledgeInteractionId":null,"interactionIdGenerated":null,"appId":null,"siteName":"day103_20200_sql_95h","interfaceId":null,"requiresBillable":null,"captureAnalytics":null,"integrationUserToken":null,"userToken":"VCH+18TpC3/7X/zXGDIqNMlrWllgRI5yATR1dMD7QRW9oKK8VEf+ZfRXy8r5ryCxpnX9kXL/8t1N/eF3XiAaw68Hpfnl87bdxTIC676foBJ2ni4Y9u/4C3wgDzyoK5L/h/IMTFn7Ktz2oHN1sZhcHg==","referrer":null,"querySource":null,"clientIP":null,"localeOverride":null}</userauthtoken>
+<kmauthtoken>{"localeId":"en_US","knowledgeInteractionId":null,"interactionIdGenerated":null,"appId":null,"siteName":"day103_20200_sql_95h","interfaceId":null,"requiresBillable":null,"captureAnalytics":null,"integrationUserToken":"ZGF5MTAzXzIwMjAwX3NxbF85NWg6czZzQ2ZsYnpBWVRuQ1RzdjFXb2VIWHNCTm1oc3g4UUJuZWloNTdYUFhNS0JLbURVL3ZCQkh0OUhuUkp2Z2dHYXQ1eEpDM0RCMHJkSnltN21GN0d2cHpwNE5TaGtTeVBxQ1dhSWVOZ3AzMmNGWmJQRU11RFhLU3BPNlBXUGtIKzZ5Q0MwdERQOWVCM1JmVHRjdFR6Q3FIRU1ZTVEzTjFWQWp5MjhtVFhBWFNvPQ==","userToken":"VCH+18TpC3/7X/zXGDIqNMlrWllgRI5yATR1dMD7QRW9oKK8VEf+ZfRXy8r5ryCxpnX9kXL/8t1N/eF3XiAaw68Hpfnl87bdxTIC676foBJ2ni4Y9u/4C3wgDzyoK5L/h/IMTFn7Ktz2oHN1sZhcHg==","referrer":null,"querySource":null,"clientIP":null,"localeOverride":null}</kmauthtoken>
+</config>
