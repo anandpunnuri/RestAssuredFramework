@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Content>
+    <answerId>0</answerId>
+<contentType>
+      <recordId>0900610448943a016df1909ce3007f57</recordId>
+      <referenceKey>FAQ</referenceKey>
+      <name>FAQ</name>
+      <links>
+         <Link>
+            <rel>canonical</rel>
+            <href>https://day103-20200-sql-95h-irs.dq.lan:443/km/api/latest/contentTypes/0900610448943a016df1909ce3007f57</href>
+            <mediaType>application/json, application/xml</mediaType>
+            <method>GET</method>
+         </Link>
+      </links>
+   </contentType>
+   <displayReviewDate>2019-12-01T04:59:00-0700</displayReviewDate>
+    <priority>PRIORITY_0</priority>
+    <published>false</published>
+    <pending>false</pending>
+    <checkedOut>false</checkedOut>
+<xml><FAQ><SUMMARY>Article1 Created through REST API which has invalid HTML and article link</SUMMARY><QUESTION><![CDATA[<o:p><ok:doc-link doc_id="FA1" contents="aaa">aaa</ok:doc-link><br /> <br /> <br /> &nbsp;</o:p>]]></QUESTION></FAQ></xml> 
+    <isForEdit>true</isForEdit>
+ <views>
+      <ViewKey>
+         <recordId>0900610448943a016df1909ce3007f4b</recordId>
+         <referenceKey>ENVIEW1</referenceKey>
+         <name>enview1</name>
+         <links>
+            <Link>
+               <rel>canonical</rel>
+               <href>https://day103-20200-sql-95h-irs.dq.lan:443/km/api/latest/views/0900610448943a016df1909ce3007f4b</href>
+               <mediaType>application/json, application/xml</mediaType>
+               <method>GET</method>
+            </Link>
+         </links>
+      </ViewKey>
+      <ViewKey>
+         <recordId>171515A0EB7E453089019A4D350B168E</recordId>
+         <referenceKey>TENANT</referenceKey>
+         <name>day103_20200_sql_95h</name>
+         <links>
+            <Link>
+               <rel>canonical</rel>
+               <href>https://day103-20200-sql-95h-irs.dq.lan:443/km/api/latest/views/171515A0EB7E453089019A4D350B168E</href>
+               <mediaType>application/json, application/xml</mediaType>
+               <method>GET</method>
+            </Link>
+         </links>
+      </ViewKey>
+   </views>
+</Content>

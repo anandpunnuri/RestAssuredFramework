@@ -5,9 +5,8 @@
     <classes>
       <class name="tests.GetRequests">
         <methods>
-          <include name="getContentByID"/>
           <include name="setup"/>
-          <include name="getContent"/>
+          <include name="postContent"/>
         </methods>
       </class> <!-- tests.GetRequests -->
     </classes>
