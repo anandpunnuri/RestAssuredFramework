@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <config>
-<site-name>day103-20200-sql-95h</site-name>
-<site_name>day103_20200_sql_95h</site_name>
-<baseURI>https://day103-20200-sql-95h-irs.dq.lan</baseURI>
+<site-name>day111-20200-sql-106h</site-name>
+<site_name>day111_20200_sql_106h</site_name>
+<baseURI>https://day111-20200-sql-106h-irs.dq.lan</baseURI>
 <basePath>/km/api/latest</basePath>
-<accountusername>enuser1</accountusername>
-<accountuserpwd>Account1234</accountuserpwd>
+<accountusername>administrator</accountusername>
+<accountuserpwd>Welcome@123</accountuserpwd>
 <apiusername>iu_migrator</apiusername>
 <apiuserpwd>okcs1234</apiuserpwd>
 <locale>en_US</locale>

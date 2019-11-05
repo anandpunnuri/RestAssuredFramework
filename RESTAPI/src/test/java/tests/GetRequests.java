@@ -11,25 +11,27 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import utilities.RestUtilities;
+import utilities.SetPayload;
+
 import static org.hamcrest.Matchers.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.SQLException;
 
 public class GetRequests {
 	RequestSpecification reqspec;
 	ResponseSpecification resSpec;
+
 	@BeforeTest
-	public void setup()
-	{
+	public void setup() {
 		Base.setup();
 		Base.generateAuthToken();
 	}
-	
-	//@Test
-	public void getContent()
-	{
+
+	// @Test
+	public void getContent() {
 		RestUtilities.setEndpoint(Endpoints.GETCONTENT);
 		reqspec = RestUtilities.getRequestSpecification();
 		reqspec.header(new Header("kmauthtoken", Base.config.getString("kmauthtoken")));
@@ -38,12 +40,11 @@ public class GetRequests {
 		resp.then().assertThat().header("Access-Control-Allow-Origin", "*");
 //		resp.then().assertThat().statusCode(200);
 		resp.then().assertThat().body(containsStringIgnoringCase("FAQ"));
-		resp.then().assertThat().body("ResultList.count",equalTo("20"));
+		resp.then().assertThat().body("ResultList.count", equalTo("20"));
 	}
-	
-	//@Test
-	public void getContentByID()
-	{
+
+	// @Test
+	public void getContentByID() {
 		RestUtilities.setEndpoint(Endpoints.GETCONTENTBYDOCID);
 		reqspec = RestUtilities.getRequestSpecification();
 		RestUtilities.setPathParameter("docId", "FA1", reqspec);
@@ -52,15 +53,19 @@ public class GetRequests {
 	}
 
 	@Test
-public void postContent()
-{
-	RestUtilities.setEndpoint(Endpoints.POSTCONTENT);
-	reqspec = RestUtilities.getRequestSpecification();
-	reqspec.header(new Header("kmauthtoken", Base.config.getString("kmauthtoken")));
-	try {
-		RestUtilities.getResponse(MethodType.POST, new String(Files.readAllBytes(Paths.get("./src/test/resources/payloads/postContent.xml"))));
-	} catch (IOException e) {
-		e.printStackTrace();
+	public void postContent() {
+		RestUtilities.setEndpoint(Endpoints.POSTCONTENT);
+		reqspec = RestUtilities.getRequestSpecification();
+		reqspec.header(new Header("kmauthtoken", Base.config.getString("kmauthtoken")));
+		try {
+			SetPayload.setContentType("./src/test/resources/payloads/postContent.xml");
+			RestUtilities.getResponse(MethodType.POST,
+					new String(Files.readAllBytes(Paths.get("./src/test/resources/payloads/postContent.xml"))));
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-}
 }
