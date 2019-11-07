@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -10,6 +11,7 @@ import io.restassured.http.Header;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import utilities.DBUtility;
 import utilities.RestUtilities;
 import utilities.SetPayload;
 
@@ -53,7 +55,7 @@ public class GetRequests {
 	}
 
 	@Test
-	public void postContent() {
+	public void postContent() throws ClassNotFoundException {
 		RestUtilities.setEndpoint(Endpoints.POSTCONTENT);
 		reqspec = RestUtilities.getRequestSpecification();
 		reqspec.header(new Header("kmauthtoken", Base.config.getString("kmauthtoken")));
@@ -65,6 +67,16 @@ public class GetRequests {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@AfterTest
+	public void teardown() {
+		try {
+			DBUtility.con.close();
+			System.out.println("Is DB Connection closed after test complete: " + DBUtility.con.isClosed());
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}

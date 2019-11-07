@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <config>
-<site-name>day111-20200-sql-106h</site-name>
-<site_name>day111_20200_sql_106h</site_name>
-<baseURI>https://day111-20200-sql-106h-irs.dq.lan</baseURI>
+<site-name>site202asp</site-name>
+<site_name>site202asp</site_name>
+<baseURI>https://site202asp-irs.dq.lan</baseURI>
 <basePath>/km/api/latest</basePath>
 <accountusername>administrator</accountusername>
 <accountuserpwd>Welcome@123</accountuserpwd>
@@ -13,7 +13,7 @@
 <lan>dq</lan>
 <Accept>application/xml</Accept>
 <ContentType>application/xml</ContentType>
-<integrationToken>ZGF5MTAzXzIwMjAwX3NxbF85NWg6UHBOZ1hqZitNYnZoeGVRdFQ5Zzh5OTUrZ3R3OW5KMXZQaGVHaHFzU2k2bzNtK0VId2N3bkRZWlhrcWhCQmtYYUk2eWd0M2ZlZWNuSlpJL1Jyd0g2YjBIc3RHRlBSREozcHo4dWlDVmZuNk9pOTFEaW02RnUwdHJDZUlIM0FFd1MvemcrNEpVd2dFdzAwSFJSSUpKVFVhYmFrQ1c5emF1c2k1Q1paVzlqT0drPQ==</integrationToken>
-<userauthtoken>{"localeId":"en_US","knowledgeInteractionId":null,"interactionIdGenerated":null,"appId":null,"siteName":"day103_20200_sql_95h","interfaceId":null,"requiresBillable":null,"captureAnalytics":null,"integrationUserToken":null,"userToken":"sapAbGKl8svc3TH9MXK2oX+RVv1jpd4qhhRNHQw2fQRqV16vI/iFiJ825KxC7wRnKd7BjGXaS33L/XDWje3SoKKhOcUWs5Om6WJwrxgLGemshrk8YufVg4yiIzg0mF4oHnQsYZQ93t/rHapjbRl3cQ==","referrer":null,"querySource":null,"clientIP":null,"localeOverride":null}</userauthtoken>
-<kmauthtoken>{"localeId":"en_US","knowledgeInteractionId":null,"interactionIdGenerated":null,"appId":null,"siteName":"day103_20200_sql_95h","interfaceId":null,"requiresBillable":null,"captureAnalytics":null,"integrationUserToken":"ZGF5MTAzXzIwMjAwX3NxbF85NWg6UHBOZ1hqZitNYnZoeGVRdFQ5Zzh5OTUrZ3R3OW5KMXZQaGVHaHFzU2k2bzNtK0VId2N3bkRZWlhrcWhCQmtYYUk2eWd0M2ZlZWNuSlpJL1Jyd0g2YjBIc3RHRlBSREozcHo4dWlDVmZuNk9pOTFEaW02RnUwdHJDZUlIM0FFd1MvemcrNEpVd2dFdzAwSFJSSUpKVFVhYmFrQ1c5emF1c2k1Q1paVzlqT0drPQ==","userToken":"sapAbGKl8svc3TH9MXK2oX+RVv1jpd4qhhRNHQw2fQRqV16vI/iFiJ825KxC7wRnKd7BjGXaS33L/XDWje3SoKKhOcUWs5Om6WJwrxgLGemshrk8YufVg4yiIzg0mF4oHnQsYZQ93t/rHapjbRl3cQ==","referrer":null,"querySource":null,"clientIP":null,"localeOverride":null}</kmauthtoken>
+<integrationToken>c2l0ZTIwMmFzcDpDa2l5MHJMS2tPMktFY29nRXNYdUNaK3A2cEtoSHJnZHdrd0FGZTN2MUNDQU9KUTlKZXQvbWFjVTRpWEp6dXBLbW15T1FPdFEwWlM3ZGpxUmM5Zk9RL3RldlpNWmhiRzk5TkNCWTZtR2lLTzJwL3Q4OVVlT2JqbDUwdTdVVkV2SExqNGJqUUdkTjkySFRTU3BzNE1JMDduOEtVeEdLYXRHK2FDaXpBcmJGMzg9</integrationToken>
+<userauthtoken>{"localeId":"en_US","knowledgeInteractionId":null,"interactionIdGenerated":null,"appId":null,"siteName":"site202asp","interfaceId":null,"requiresBillable":null,"captureAnalytics":null,"integrationUserToken":null,"userToken":"Ix7mPq1/GddIOaCYQBQSnHUHcvIDvff7IMXQm2QxmTo7t0TdK+NDwddrE3ElXa0oU5zfD/tgz5/dMRKji4c4s1+74yhaypritOcFlHIHzTw+RGL8INpRQ8KpAXqjoJQFIH569VAlgttGny9cLNUQCg==","referrer":null,"querySource":null,"clientIP":null,"localeOverride":null}</userauthtoken>
+<kmauthtoken>{"localeId":"en_US","knowledgeInteractionId":null,"interactionIdGenerated":null,"appId":null,"siteName":"site202asp","interfaceId":null,"requiresBillable":null,"captureAnalytics":null,"integrationUserToken":"c2l0ZTIwMmFzcDpDa2l5MHJMS2tPMktFY29nRXNYdUNaK3A2cEtoSHJnZHdrd0FGZTN2MUNDQU9KUTlKZXQvbWFjVTRpWEp6dXBLbW15T1FPdFEwWlM3ZGpxUmM5Zk9RL3RldlpNWmhiRzk5TkNCWTZtR2lLTzJwL3Q4OVVlT2JqbDUwdTdVVkV2SExqNGJqUUdkTjkySFRTU3BzNE1JMDduOEtVeEdLYXRHK2FDaXpBcmJGMzg9","userToken":"Ix7mPq1/GddIOaCYQBQSnHUHcvIDvff7IMXQm2QxmTo7t0TdK+NDwddrE3ElXa0oU5zfD/tgz5/dMRKji4c4s1+74yhaypritOcFlHIHzTw+RGL8INpRQ8KpAXqjoJQFIH569VAlgttGny9cLNUQCg==","referrer":null,"querySource":null,"clientIP":null,"localeOverride":null}</kmauthtoken>
 </config>
