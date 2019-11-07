@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Content>
 	<answerId>0</answerId>
 	<contentType>
@@ -9,21 +9,17 @@
 	<xml>
 		<FAQ>
 			<SUMMARY>Article1 Created through REST API which has invalid HTML and
-				article link</SUMMARY>
-			<QUESTION><![CDATA[<o:p><ok:doc-link doc_id="FA1" contents="aaa">aaa</ok:doc-link><br /> <br /> <br /> &nbsp;</o:p>]]></QUESTION>
+				article link
+			</SUMMARY>
+			<QUESTION><![CDATA[some article]]></QUESTION>
 		</FAQ>
 	</xml>
 	<isForEdit>true</isForEdit>
 	<views>
 		<ViewKey>
-			<recordId>0900610448943a016df1909ce3007f4b</recordId>
-			<referenceKey>ENVIEW1</referenceKey>
-			<name>enview1</name>
-		</ViewKey>
-		<ViewKey>
-			<recordId>171515A0EB7E453089019A4D350B168E</recordId>
-			<referenceKey>TENANT</referenceKey>
-			<name>day103_20200_sql_95h</name>
+			<recordId>123</recordId>
+			<referenceKey>123</referenceKey>
+			<name>123</name>
 		</ViewKey>
 	</views>
 </Content>

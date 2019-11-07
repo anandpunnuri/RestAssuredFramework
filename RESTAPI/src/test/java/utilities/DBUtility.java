@@ -41,7 +41,7 @@ public class DBUtility {
 		getDBConnection();
 		String[] CTdetails = new String[2];
 		try {
-			rs = stmt.executeQuery("select RECORDID, REFERENCEKEY from CONTENTCHANNEL where NAME='"+item+"'");
+			rs = stmt.executeQuery("select RECORDID, REFERENCEKEY from CONTENTCHANNEL where REFERENCEKEY='"+item+"'");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -65,7 +65,7 @@ public class DBUtility {
 	{
 		String[] Viewdetails = new String[3];
 		stmt=con.createStatement();
-		rs = stmt.executeQuery("select RECORDID, REFERENCEKEY, NAME from CONTENTCHANNEL where NAME='"+item+"'");
+		rs = stmt.executeQuery("select s.RECORDID, s.REFERENCEKEY, sr.NAME from SITE s, SITERESOURCE sr where sr.NAME='"+item+"' and s.RECORDID=sr.SITEID");
 		int i=0,j=1;
 		while(rs.next())
 		{
