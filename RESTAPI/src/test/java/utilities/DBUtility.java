@@ -39,22 +39,18 @@ public class DBUtility {
 	public static String[] getContentTypeDetails(String item) throws ClassNotFoundException, SQLException
 	{
 		getDBConnection();
-		String[] CTdetails = new String[2];
+		String[] CTdetails = new String[3];
 		try {
-			rs = stmt.executeQuery("select RECORDID, REFERENCEKEY from CONTENTCHANNEL where REFERENCEKEY='"+item+"'");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		int i=0,j=1;
-		try {
+			rs = stmt.executeQuery("select c.RECORDID, c.REFERENCEKEY, cr.NAME from CONTENTCHANNEL c, CONTENTCHANNELRESOURCE cr where cr.NAME ='"+item+"' and c.RECORDID=cr.CONTENTCHANNELID");
 			while(rs.next())
 			{
-				CTdetails[i]=rs.getString(j);
-				i++;
-				j++;
-			}
-		} catch (SQLException e) {
+				for(int i=0,j=1;i<3;i++,j++)
+				{
+					CTdetails[i]=rs.getString(j);
+				}
+			} 
+		}
+		catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -66,12 +62,12 @@ public class DBUtility {
 		String[] Viewdetails = new String[3];
 		stmt=con.createStatement();
 		rs = stmt.executeQuery("select s.RECORDID, s.REFERENCEKEY, sr.NAME from SITE s, SITERESOURCE sr where sr.NAME='"+item+"' and s.RECORDID=sr.SITEID");
-		int i=0,j=1;
 		while(rs.next())
 		{
-			Viewdetails[i]=rs.getString(j);
-			i++;
-			j++;
+			for(int i=0,j=1;i<3;i++,j++)
+			{
+				Viewdetails[i]=rs.getString(j);
+			}
 		}
 		return Viewdetails;
 	}

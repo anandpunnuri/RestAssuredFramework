@@ -3,6 +3,8 @@ package tests;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.w3c.dom.DOMException;
+import org.xml.sax.SAXException;
 
 import base.Base;
 import base.Endpoints;
@@ -21,6 +23,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.SQLException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 
 public class GetRequests {
 	RequestSpecification reqspec;
@@ -55,12 +60,12 @@ public class GetRequests {
 	}
 
 	@Test
-	public void postContent() throws ClassNotFoundException {
+	public void postContent() throws ClassNotFoundException, DOMException, SAXException, ParserConfigurationException, TransformerException {
 		RestUtilities.setEndpoint(Endpoints.POSTCONTENT);
 		reqspec = RestUtilities.getRequestSpecification();
 		reqspec.header(new Header("kmauthtoken", Base.config.getString("kmauthtoken")));
 		try {
-			SetPayload.setContentType("./src/test/resources/payloads/postContent.xml");
+			SetPayload.preparePayload("./src/test/resources/payloads/postContent.xml");
 			RestUtilities.getResponse(MethodType.POST,
 					new String(Files.readAllBytes(Paths.get("./src/test/resources/payloads/postContent.xml"))));
 		} catch (IOException e) {
