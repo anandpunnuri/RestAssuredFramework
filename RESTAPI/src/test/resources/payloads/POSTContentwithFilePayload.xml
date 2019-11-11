@@ -1,0 +1,16 @@
+<CompositeContent>
+	<content>
+		<contentType>
+			<recordId>090062035ea5089016e39d075c7007ed7</recordId>
+			<referenceKey>FAQ</referenceKey>
+			<name>FAQ</name>
+		</contentType>
+<xml><FAQ><SUMMARY>content IMPORT article created through REST</SUMMARY><QUESTION><![CDATA[Article Question]]></QUESTION><ANSWER><![CDATA[Article Answer]]></ANSWER><ATTACHMENT SIZE="0">IphoneCamera.jpg</ATTACHMENT></FAQ></xml>
+<isForEdit>true</isForEdit>
+		
+	<views><ViewKey><recordId>090062035ea5089016e39d075c7007ee3</recordId><referenceKey>ENVIEW</referenceKey><name>enview</name></ViewKey><ViewKey><recordId>090062035ea5089016e39d075c7007ee1</recordId><referenceKey>FRVIEW</referenceKey><name>frview</name></ViewKey></views></content>
+	<contentModificationQualifier>
+		<publish>false</publish>
+		<bypassWorkflowAndPublish>false</bypassWorkflowAndPublish>
+	</contentModificationQualifier>
+</CompositeContent>

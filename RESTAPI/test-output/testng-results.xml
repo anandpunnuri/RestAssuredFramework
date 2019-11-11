@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7127" started-at="2019-11-08T05:47:41 MST" finished-at="2019-11-08T05:47:48 MST">
+  <suite name="Default suite" duration-ms="13388" started-at="2019-11-11T04:00:27 MST" finished-at="2019-11-11T04:00:40 MST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7127" started-at="2019-11-08T05:47:41 MST" finished-at="2019-11-08T05:47:48 MST">
-      <class name="tests.GetRequests">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.GetRequests@610694f1]" name="setup" is-config="true" duration-ms="5468" started-at="2019-11-08T05:47:41 MST" finished-at="2019-11-08T05:47:46 MST">
+    <test name="Default test" duration-ms="13388" started-at="2019-11-11T04:00:27 MST" finished-at="2019-11-11T04:00:40 MST">
+      <class name="tests.POSTMediaAttachments">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.POSTMediaAttachments@610694f1]" name="setup" is-config="true" duration-ms="11513" started-at="2019-11-11T04:00:27 MST" finished-at="2019-11-11T04:00:38 MST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="postContent()[pri:0, instance:tests.GetRequests@610694f1]" name="postContent" duration-ms="1577" started-at="2019-11-08T05:47:46 MST" finished-at="2019-11-08T05:47:48 MST">
+        <test-method status="PASS" signature="postContentImport()[pri:0, instance:tests.POSTMediaAttachments@610694f1]" name="postContentImport" duration-ms="1686" started-at="2019-11-11T04:00:39 MST" finished-at="2019-11-11T04:00:40 MST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postContent -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.GetRequests@610694f1]" name="teardown" is-config="true" duration-ms="2" started-at="2019-11-08T05:47:48 MST" finished-at="2019-11-08T05:47:48 MST">
+        </test-method> <!-- postContentImport -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.POSTMediaAttachments@610694f1]" name="teardown" is-config="true" duration-ms="4" started-at="2019-11-11T04:00:40 MST" finished-at="2019-11-11T04:00:40 MST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- tests.GetRequests -->
+      </class> <!-- tests.POSTMediaAttachments -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

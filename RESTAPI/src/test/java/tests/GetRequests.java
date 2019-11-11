@@ -16,6 +16,7 @@ import io.restassured.specification.ResponseSpecification;
 import utilities.DBUtility;
 import utilities.RestUtilities;
 import utilities.SetPayload;
+import utilities.updateXML;
 
 import static org.hamcrest.Matchers.*;
 
@@ -30,11 +31,13 @@ import javax.xml.transform.TransformerException;
 public class GetRequests {
 	RequestSpecification reqspec;
 	ResponseSpecification resSpec;
-
+	updateXML updatexml;
+	
 	@BeforeTest
 	public void setup() {
 		Base.setup();
 		Base.generateAuthToken();
+		updatexml = new updateXML();
 	}
 
 	// @Test

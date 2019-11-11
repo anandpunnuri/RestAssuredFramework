@@ -8,5 +8,5 @@ public class Endpoints {
 	public static final String GETCONTENT = "/content";
 	public static final String GETCONTENTBYDOCID = "/content/docId/{docId}";
 	public static final String POSTCONTENT = "/content";
-	
+	public static final String POSTCONTENTIMPORT = "/content/import";
 }

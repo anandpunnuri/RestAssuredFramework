@@ -54,7 +54,7 @@ public class RestUtilities {
 		return RES_SPECIFICATION;
 	}
 	
-public static void setRequestHeader(HashMap<String, String> hm, RequestSpecification spec) {
+	public static void setRequestHeader(HashMap<String, String> hm, RequestSpecification spec) {
 		REQ_SPECIFICATION = REQ_SPECIFICATION.spec(spec);
 		REQ_SPECIFICATION.headers(hm);
 		System.out.println("Request Headers " + REQ_SPECIFICATION.log().headers());
@@ -103,7 +103,14 @@ public static void setRequestHeader(HashMap<String, String> hm, RequestSpecifica
 		Response response = null;
 		switch (methodType) {
 		case POST:
+			if(payload.isEmpty())
+			{
+				response = given().spec(REQ_SPECIFICATION).log().all(true).when().post(ENDPOINT);
+			}
+			else
+			{
 			response = given().spec(REQ_SPECIFICATION).log().all(true).body(payload).when().post(ENDPOINT);
+			}
 			System.out.println("Response body is: ");
 			System.out.print(response.body().asString());
 			break;

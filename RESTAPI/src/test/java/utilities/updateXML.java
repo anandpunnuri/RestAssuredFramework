@@ -164,10 +164,20 @@ try
 			name.appendChild(document2.createTextNode(viewdetails[2]));
 
 			if (!doesViewsTagExist) {
+				if(document2.getElementsByTagName("Content").getLength()>0)
+				{
 				NodeList contents = document2.getElementsByTagName("Content");
 				Element content = (Element) contents.item(0);
 				content.appendChild(views);
 				doesViewsTagExist = true;
+				}
+				else
+				{
+					NodeList contents = document2.getElementsByTagName("content");
+					Element content = (Element) contents.item(0);
+					content.appendChild(views);
+					doesViewsTagExist = true;
+				}
 			}
 
 			document2.getElementsByTagName("views").item(0).appendChild(ViewKey);
@@ -239,9 +249,9 @@ catch(SQLException e)
 			if (n.hasChildNodes()) // edit to remove children of children
 			{
 				removeAll(n);
-				node.removeChild(n);
+				System.out.println("Node removed is: "+n.getParentNode().removeChild(n));
 			} else
-				node.removeChild(n);
+				System.out.println("Node removed is: "+n.getParentNode().removeChild(n));
 		}
 	}
 }
