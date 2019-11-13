@@ -12,10 +12,12 @@ import org.json.simple.JSONObject;
 public class Base {
 
 	public static XMLConfiguration config;
+	public static XMLConfiguration testdata;
 
 	public static void setup() {
 		try {
 			config = new XMLConfiguration(new File("./src/test/resources/config/config.xml"));
+			testdata = new XMLConfiguration(new File("./src/test/resources/testData/testdata.xml"));
 		} catch (ConfigurationException ce) {
 			System.out.println("Configuration exception in Base Class: " + ce.getMessage());
 		}

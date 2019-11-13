@@ -43,6 +43,11 @@ public class RestUtilities {
 		REQ_SPECIFICATION = REQ_SPEC_BUILDER.build();
 		return REQ_SPECIFICATION;
 	}
+	
+	public static void setRequestSpecification(RequestSpecification rspec)
+	{
+		REQ_SPECIFICATION=REQ_SPECIFICATION.spec(rspec);
+	}
 
 	public static ResponseSpecification getResponseSpecification()
 	{
@@ -99,13 +104,14 @@ public class RestUtilities {
 		return response;
 	}
 
-	public static Response getResponse(MethodType methodType, String payload) {
+	public static Response getResponse(MethodType methodType,String payload) {
 		Response response = null;
 		switch (methodType) {
 		case POST:
 			if(payload.isEmpty())
 			{
 				response = given().spec(REQ_SPECIFICATION).log().all(true).when().post(ENDPOINT);
+				
 			}
 			else
 			{

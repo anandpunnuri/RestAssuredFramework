@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.POSTMediaAttachments">
         <methods>
-          <include name="postContentImport"/>
+          <include name="postMedia"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>

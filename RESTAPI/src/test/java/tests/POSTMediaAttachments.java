@@ -6,6 +6,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.SQLException;
 
+import javax.activation.MimeType;
+
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -13,6 +15,7 @@ import org.testng.annotations.Test;
 import base.Base;
 import base.Endpoints;
 import base.MethodType;
+import io.restassured.builder.MultiPartSpecBuilder;
 import io.restassured.http.Header;
 import io.restassured.specification.RequestSpecification;
 import utilities.DBUtility;
@@ -30,7 +33,7 @@ public class POSTMediaAttachments {
 		updatexml = new updateXML();
 	}
 	
-	@Test
+	//@Test
 	public void postContentImport() throws IOException
 	{
 		RestUtilities.setEndpoint(Endpoints.POSTCONTENTIMPORT);
@@ -45,6 +48,24 @@ public class POSTMediaAttachments {
 		RestUtilities.getResponse(MethodType.POST,"");
 	}
 	
+	@Test
+	public void postMedia()
+	{
+		RestUtilities.setEndpoint(Endpoints.POSTMEDIA);
+		RequestSpecification reqspec = RestUtilities.getRequestSpecification();
+		reqspec.contentType("multipart/form-data");
+		reqspec.header(new Header("kmauthtoken", Base.config.getString("kmauthtoken")));
+		updatexml.setPostMediaPayload("./src/test/resources/payloads/postMedia.xml");
+		reqspec.formParam("mediaImportBO", new File("./src/test/resources/payloads/postMedia.xml"));
+		reqspec.formParam("filesToUpload", new File("./src/test/resources/filesToUpload/"+Base.testdata.getString("postmediaFileName")));
+//		reqspec.multiPart("mediaImportBO",new MultiPartSpecBuilder(new File("./src/test/resources/payloads/postMedia.xml")).build());
+//		reqspec.multiPart("filesToUpload", new MultiPartSpecBuilder(new File("./src/test/resources/filesToUpload/"+Base.testdata.getString("postmediaFileName"))).build());
+		reqspec.multiPart("mediaImportBO",new File("./src/test/resources/payloads/postMedia.xml"));
+//		reqspec.multiPart("mediaImportBO",new File("./src/test/resources/payloads/postMedia.xml"), "application/xml");
+		reqspec.multiPart("filesToUpload", new File("./src/test/resources/filesToUpload/"+Base.testdata.getString("postmediaFileName")));
+//		RestUtilities.setRequestSpecification(reqspec);
+		RestUtilities.getResponse(MethodType.POST,"");
+	}
 	@AfterTest
 	public void teardown() {
 		try {

@@ -254,4 +254,27 @@ catch(SQLException e)
 				System.out.println("Node removed is: "+n.getParentNode().removeChild(n));
 		}
 	}
+
+	public void setPostMediaPayload(String filepath)
+	{
+		try
+		{
+		Document document = getDocumentObject("./src/test/resources/testData/testdata.xml");
+		Document document2 = getDocumentObject(filepath);
+		document.normalize();
+		document2.normalize();
+		String filename = document.getElementsByTagName("postmediaFileName").item(0).getFirstChild().getNodeValue();
+		String relativepath = document.getElementsByTagName("postmediaRelativePath").item(0).getFirstChild().getNodeValue();
+		document2.getElementsByTagName("fileName").item(0).getFirstChild().setTextContent(filename);
+		document2.getElementsByTagName("relativePath").item(0).getFirstChild().setTextContent(relativepath);
+		document.normalize();
+		document2.normalize();
+		XMLtransform(document2, filepath);
+		}
+		catch(DOMException e)
+		{
+			System.out.println("DOMException in updateContent type: "+e.getMessage());
+		}
+	}
+
 }
