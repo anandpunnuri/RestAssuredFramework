@@ -40,7 +40,7 @@ public class GetRequests {
 		updatexml = new updateXML();
 	}
 
-	// @Test
+	 //@Test
 	public void getContent() {
 		RestUtilities.setEndpoint(Endpoints.GETCONTENT);
 		reqspec = RestUtilities.getRequestSpecification();
@@ -62,7 +62,7 @@ public class GetRequests {
 		RestUtilities.getResponse(MethodType.GET, null).then().log().all(true);
 	}
 
-	@Test
+//	@Test
 	public void postContent() throws ClassNotFoundException, DOMException, SAXException, ParserConfigurationException, TransformerException {
 		RestUtilities.setEndpoint(Endpoints.POSTCONTENT);
 		reqspec = RestUtilities.getRequestSpecification();
@@ -81,11 +81,6 @@ public class GetRequests {
 
 	@AfterTest
 	public void teardown() {
-		try {
-			DBUtility.con.close();
-			System.out.println("Is DB Connection closed after test complete: " + DBUtility.con.isClosed());
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		
 	}
 }

@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import base.Base;
+
 import java.lang.reflect.*;
 
 public class DBUtility {
@@ -18,7 +21,7 @@ public class DBUtility {
 		try
 		{
 	Class.forName("com.mysql.jdbc.Driver");  
-	con=DriverManager.getConnection("jdbc:mysql://localhost:3306/site202asp","59001","!A8x559M:MedQa)-G4=y"); 
+	con=DriverManager.getConnection("jdbc:mysql://localhost:3306/"+Base.config.getString("dbname"),Base.config.getString("dbusername"),Base.config.getString("dbpwd")); 
 	System.out.println("SQL Driver is: "+con.getClass()+". Is connection valid?: "+con.isValid(60));
 	
 	stmt=con.createStatement();
@@ -36,6 +39,20 @@ public class DBUtility {
 //	ResultSet rs=stmt.executeQuery("select * from emp"); 
 	}
 	
+	public static void closeDBConnection()
+	{
+		try
+		{
+		if(con.isValid(10))
+		{
+			con.close();
+		}
+		}
+		catch(SQLException e)
+		{
+			System.out.println("SQL Exception while closing DB connection: "+e.getMessage());
+		}
+	}
 	public static String[] getContentTypeDetails(String item) throws ClassNotFoundException, SQLException
 	{
 		getDBConnection();
@@ -54,12 +71,16 @@ public class DBUtility {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		closeDBConnection();
 		return CTdetails;
 	}
 	
-	public static String[] getViewDetails(String item) throws SQLException
+	public static String[] getViewDetails(String item)
 	{
 		String[] Viewdetails = new String[3];
+		try
+		{
+		getDBConnection();
 		stmt=con.createStatement();
 		rs = stmt.executeQuery("select s.RECORDID, s.REFERENCEKEY, sr.NAME from SITE s, SITERESOURCE sr where sr.NAME='"+item+"' and s.RECORDID=sr.SITEID");
 		while(rs.next())
@@ -69,6 +90,16 @@ public class DBUtility {
 				Viewdetails[i]=rs.getString(j);
 			}
 		}
+		}
+		catch(SQLException e)
+		{
+			System.out.println("SQL Exception in GetView Details: "+e.getMessage());
+		}
+		catch(ClassNotFoundException e)
+		{
+			System.out.println("Class Not Found Exception in GetView Details: "+e.getMessage());
+		}
+		closeDBConnection();
 		return Viewdetails;
 	}
 	

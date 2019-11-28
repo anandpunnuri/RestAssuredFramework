@@ -207,10 +207,10 @@ catch(DOMException e)
 {
 	System.out.println("DOMException in updateContent type: "+e.getMessage());
 }
-catch(SQLException e)
-{
-	System.out.println("SQLException in updateContent type: "+e.getMessage());
-}
+//catch(SQLException e)
+//{
+//	System.out.println("SQLException in updateContent type: "+e.getMessage());
+//}
 //catch(ClassNotFoundException e)
 //{
 //	System.out.println("ClassNotFoundException in updateContent type: "+e.getMessage());

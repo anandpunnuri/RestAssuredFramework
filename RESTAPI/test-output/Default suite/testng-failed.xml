@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.POSTMediaAttachments">
+      <class name="tests.GetRequests">
         <methods>
-          <include name="postMedia"/>
-          <include name="setup"/>
           <include name="teardown"/>
+          <include name="setup"/>
+          <include name="postContent"/>
         </methods>
-      </class> <!-- tests.POSTMediaAttachments -->
+      </class> <!-- tests.GetRequests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

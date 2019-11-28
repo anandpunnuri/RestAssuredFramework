@@ -1,7 +1,7 @@
 <Content>
 	<answerId>0</answerId>
 	<contentType>
-		<recordId>090062035ea5089016e39d075c7007ed7</recordId>
+		<recordId>09006516a3964a016e849de131007f97</recordId>
 		<referenceKey>FAQ</referenceKey>
 		<name>FAQ</name>
 	</contentType>
@@ -9,4 +9,4 @@
 	</xml>
 	<isForEdit>true</isForEdit>
 
- <views><ViewKey><recordId>090062035ea5089016e39d075c7007ee3</recordId><referenceKey>ENVIEW</referenceKey><name>enview</name></ViewKey><ViewKey><recordId>090062035ea5089016e39d075c7007ee1</recordId><referenceKey>FRVIEW</referenceKey><name>frview</name></ViewKey></views></Content>
+ <views><ViewKey><recordId>09006516a3964a016e849de131007f50</recordId><referenceKey>ENVIEW</referenceKey><name>enview</name></ViewKey><ViewKey><recordId>0900655f29f42d016ea616b187007fe2</recordId><referenceKey>FRVIEW</referenceKey><name>frview</name></ViewKey></views></Content>
